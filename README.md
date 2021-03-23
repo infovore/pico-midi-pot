@@ -26,6 +26,9 @@ Hokd down the BOOTSEL button on your Pico before you connect it to your computer
 
 Voltages between 0 and 3.3V entering pin 26 (ie, ADC pin 0) will be mapped to 0-127 on midi continuous controller 32.
 
+## Code Commentary
+
+`pico-midi-pot.c` is where all the work happens, and it was heavily cribbed from TinyUSB MIDI examples; it could be simplified further should you wish. `tusb_config.h` and `usb_descriptors.h` were largely cribbed from existing TinyUSB examples, as was the `pico_sdk_import` CMake configuration. Altering and manipulating this program should largely come down to altering `pico-midi-pot.c`, adding new headers and code files (.c, .h), and adjusting `CMakeLists.txt` to reflect your new configuration.
 ## CircuitPython equivalent
 
 A CircuitPython equivalent, using the [Adafruit CircuitPython MIDI library][cpmidi], is included as `midi_pot_micropython.py`. This is primarily included to make comparison between the C++ and Python options easier.
