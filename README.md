@@ -4,7 +4,8 @@ Connect a pot as a voltage divider to pin 26 of a Raspberry Pi Pico. This script
 
 It uses a highly similar CMake configuration to the [Raspberry Pi Examples][examples], so should be compilable in a very similar way: I'm just cribbing from the ["Getting started with Raspberry Pi Pico" document][picostart].
 
-## Compilation
+
+## Compilation
 
 You'll need the [Pico SDK][picosdk] installed and its path available as the environment variable `PICO_SDK_PATH`. You'll also require CMake, `arm-none-eabi-gcc`, etc, as per the Pico SDK documentation. Then, from a checkout of this repository:
 
@@ -25,7 +26,13 @@ Hokd down the BOOTSEL button on your Pico before you connect it to your computer
 
 Voltages between 0 and 3.3V entering pin 26 (ie, ADC pin 0) will be mapped to 0-127 on midi continuous controller 32.
 
+## CircuitPython equivalent
+
+A CircuitPython equivalent, using the [Adafruit CircuitPython MIDI library][cpmidi], is included as `midi_pot_micropython.py`. This is primarily included to make comparison between the C++ and Python options easier.
+
 
 [picosdk]: https://github.com/raspberrypi/pico-sdk
 [examples]: https://github.com/raspberrypi/pico-examples/
 [picostart]: https://datasheets.raspberrypi.org/pico/getting-started-with-pico.pdf
+[circuitpython]: https://circuitpython.org
+[cpmidi]: https://github.com/adafruit/Adafruit_CircuitPython_MIDI
