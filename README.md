@@ -20,7 +20,7 @@ build pico-midi-pot
 
 Compliation should generate, in the `build` directory, a `pico-midi-pot.uf2` artefact.
 
-Hokd down the BOOTSEL button on your Pico before you connect it to your computer over USB; then, plug in the USB lead holding down BOOTSEL. RPI-RP2 should appear on your computer as a drive. Copy `pico-midi-pot.uf2` to this drive; it will flash the microcontroller, and immediately unmount,
+Hold down the BOOTSEL button on your Pico before you connect it to your computer over USB; then, plug in the USB lead holding down BOOTSEL. RPI-RP2 should appear on your computer as a drive. Copy `pico-midi-pot.uf2` to this drive; it will flash the microcontroller, and immediately unmount.
 
 ## Usage
 
