@@ -92,7 +92,9 @@ void midi_task(void)
   }
 
   // Send CC on jack 0 for controller 32, output value the 7-bit version of the pot.
-  tudi_midi_write24(0, 0xB0, 32, output);
+  uint8_t midi_data[3] = { 0xB0, 32, output };
+  uint8_t cable_num = 0;
+  tud_midi_stream_write(cable_num, midi_data, 3);
   prevValue = output;
 }
 
